@@ -45,6 +45,8 @@ npm install react-router-dom
   - style
   - sx for Material UI
 - Tailwind CSS IntelliSense
+- index.js file in each componenet: For ease of import in other file
+- key attribute of component: Unique identity for repeated comoponent call
 
 # parts not explain (self research)
 
@@ -54,3 +56,5 @@ npm install react-router-dom
 - media query code
 - HOW IMPORT EXPORT WORK IN JS
   - Use of {} in import
+- spread operator
+- Optional chaining
