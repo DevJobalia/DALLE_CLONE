@@ -35,6 +35,16 @@ npm install react-router-dom
  npm run dev
 ```
 
+# Component Structure
+
+    .
+    ├── Home                    # Test files (alternatively `spec` or `tests`)
+    │   ├── benchmarks          # Load and stress tests
+    │   ├── integration         # End-to-end, integration tests (alternatively `e2e`)
+    │   └── unit                # Unit tests
+    └── Create Post
+        └── getRandomPrompts
+
 # miscellanous
 
 - ES7+ REACT/REDUX/REACT-NATIVE EXTENSION
@@ -47,6 +57,8 @@ npm install react-router-dom
 - Tailwind CSS IntelliSense
 - index.js file in each componenet: For ease of import in other file
 - key attribute of component: Unique identity for repeated comoponent call
+- utils folder: contains utility functiions which can be reused in application
+- useState: to store data or update data for given component
 
 # parts not explain (self research)
 
@@ -58,3 +70,14 @@ npm install react-router-dom
   - Use of {} in import
 - spread operator
 - Optional chaining
+- HTML SEMANTIC TAGS
+- e.target in createPost method: https://www.w3schools.com/jsref/event_target.asp
+
+# backend temp readme
+
+- nodemon
+  -axios
+
+# confusion
+
+- isSupriseMe: prop
