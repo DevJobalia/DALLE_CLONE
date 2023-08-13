@@ -1,38 +1,64 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
 # Technology / Packages used
 
-- VITE: To create local development server, rather than using command create-react-app + Built tool
-- TAILWIND: A utility-first CSS framework
-- FILE-SAVER: To save files at client side, for web. that generate file for client.
-  - For files coming from server use [Content-Disposition](https://github.com/eligrey/FileSaver.js/wiki/Saving-a-remote-file#using-http-header)
-- react-router-dom
+- nodemon: To keep backend running, even after making changes to it
+- cloudinary: To store images
+- cors: for cross origin request
+- dotEnv: for storing secrets
+- express
+- mongoose
+- openai
+
+-axios
 
 # PACKAGE INSTALLATION MANUAL
 
+1. SPLIT CLIENT AND SERVER TERMINAL
+2. INTIAL SETUP
+
 ```bash
 cd DALLE_CLONE
-cd client
-npm create vite@latest ./
-npm install
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-npm install file-saver
-npm install react-router-dom
-
+cd server
 ```
 
-# To run
+TO INITIALISE EMPTY PACKAGE.JSON (WITH NO DEPENDENCY)
 
 ```bash
- npm run dev
+npm init -y
+```
+
+3. CHANGES IN PACKAGE.JSON
+
+- remove test
+- add: "start" : "nodemon index"
+
+```json
+"scripts": {
+    "start": "nodemon index"
+  },
+```
+
+4. INSTALL PACKAGES
+
+```bash
+npm install cloudinary cors dotenv express mongoose nodemon openai
+```
+
+5. To work with modules of es6+ which is called using "import and export" and not "requires"
+
+```json
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+
+  "type": "module",
+
+  "main": "index.js",
+```
+
+# To run server
+
+```bash
+ npm start
 ```
 
 # Component Structure
