@@ -84,6 +84,8 @@ All nodes have the same responsibility, and data replication between them basica
 
 - process.env.MONGODB_URL
 - model, collection in mongo db.
+- api end points for front end
+- dot env, enviorment variables
 
 # confusion
 
