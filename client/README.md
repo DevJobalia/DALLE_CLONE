@@ -31,6 +31,8 @@ npm install react-router-dom
 
 # To run
 
+In client directory
+
 ```bash
  npm run dev
 ```

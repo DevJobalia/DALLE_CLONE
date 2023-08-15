@@ -1,7 +1,7 @@
 # Technology / Packages used
 
 - nodemon: To keep backend running, even after making changes to it
-- cloudinary: To store images
+- cloudinary: To store images ON CLOUD
 - cors: for cross origin request
 - dotEnv: for storing secrets
 - express
@@ -55,6 +55,12 @@ npm install cloudinary cors dotenv express mongoose nodemon openai
   "main": "index.js",
 ```
 
+6. packages for Leap.ai
+
+```bash
+npm install @leap-ai/sdk
+```
+
 # To run server
 
 ```bash
@@ -71,14 +77,20 @@ npm install cloudinary cors dotenv express mongoose nodemon openai
     └── Create Post
         └── getRandomPrompts
 
+# Technology / Packages used
+
+- USE OF ENV: hide of imp data, rather than writing it as part of code
+
 # miscellanous
 
 - every time we update .env we must restart the server
+
 - A database cluster: is a collection of databases that is managed by a single instance of a running database server
 
 All nodes have the same responsibility, and data replication between them basically consists of each node passing information to the next. Every time nodes are added or removed from the cluster, the cluster reorganizes to maintain consistency. Your application can read/write on any node in the cluster.
 
--
+- _BACKENd AND FRONT END INTEGERATON_: export route made using express.route(): to return data from server
+  - in react createPage page: we use fetch() to retrive data
 
 # parts not explain (self research)
 
@@ -86,6 +98,9 @@ All nodes have the same responsibility, and data replication between them basica
 - model, collection in mongo db.
 - api end points for front end
 - dot env, enviorment variables
+- req.body (learn basic express and node terminology and its uses)
+  - HOW IT HELPS REACT SEND DATA TO EXPRESS
+  - E.G. dalleRoutes req.body.prompt
 
 # confusion
 
