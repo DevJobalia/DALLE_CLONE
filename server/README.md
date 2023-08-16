@@ -6,7 +6,7 @@
 - dotEnv: for storing secrets
 - express
 - mongoose
-- openai
+- leap.ai
 
 -axios
 
@@ -40,7 +40,7 @@ npm init -y
 4. INSTALL PACKAGES
 
 ```bash
-npm install cloudinary cors dotenv express mongoose nodemon openai
+npm install cloudinary cors dotenv express mongoose nodemon
 ```
 
 5. To work with modules of es6+ which is called using "import and export" and not "requires"
