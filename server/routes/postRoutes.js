@@ -17,12 +17,35 @@ cloudinary.config({
 });
 
 // GET ALL POST ROUTE
-router.route("/").get(async (req, res) => {});
+router.route("/").get(async (req, res) => {
+  try {
+    const posts = await Post.find({});
+
+    res.status(201).json({ success: true, data: posts });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error });
+  }
+});
 
 // CREATE A POST ROUTE
 router.route("/").post(async (req, res) => {
-  // get input from front end
-  const { name, prompt, photo } = req.body;
+  try {
+    // get input from front end
+    const { name, prompt, photo } = req.body;
+    // UPLOAD TO CLOUDINARY, THEN GET ITS URL TO ACCESS
+    const photoUrl = await cloudinary.uploader.upload(photo);
+
+    // SAVE ON MONGO DB
+    const newPost = await Post.create({
+      name,
+      prompt,
+      photo: photoUrl.url,
+    });
+
+    res.status(200).json({ success: true, data: newPost });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error });
+  }
 });
 export default router;
 

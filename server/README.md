@@ -1,7 +1,7 @@
 # Technology / Packages used
 
 - nodemon: To keep backend running, even after making changes to it
-- cloudinary: To store images ON CLOUD
+- cloudinary: To store images ON CLOUD (best practice: for storing large no. of images and just providing url in Db)
 - cors: for cross origin request
 - dotEnv: for storing secrets
 - express
@@ -101,6 +101,7 @@ All nodes have the same responsibility, and data replication between them basica
 - req.body (learn basic express and node terminology and its uses)
   - HOW IT HELPS REACT SEND DATA TO EXPRESS
   - E.G. dalleRoutes req.body.prompt
+- res.status (express)
 
 # confusion
 
